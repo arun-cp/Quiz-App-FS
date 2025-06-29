@@ -1,0 +1,130 @@
+
+.qstartbody {
+    height: 86%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+}
+
+.qstartleft {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    gap: 1%;
+}
+
+.qstartleft button {
+    float: right;
+    margin: 3px;
+    padding: 5px;
+    width: 15%;
+}
+
+.qdetails {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    width: 85%;
+    height: 15%;
+    background-color: var(--comp-bg-color);
+    color: #361c6a;
+    padding: 20px;
+}
+
+.qbox {
+    border-radius: 5px;
+    width: 85%;
+    height: 42%;
+    background-color: var(--comp-bg-color);
+    padding: 20px;
+}
+
+.qbox input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #a391c5; 
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.qbox input[type="radio"]:checked {
+    background-color: #7733ff; 
+    border: 2px solid #a391c5; 
+}
+
+.qbox label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.qbox h4 {
+    background-color: #adb4ba;
+    border-style: solid;
+    border-color: #9d2106;
+    border-radius: 4px;
+    border-width: 2px;
+    width: 16%;
+    text-align: center;
+}
+
+.qoption {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0.5% 0%;
+    gap: 1%;
+}
+
+.qstartright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; 
+    gap: 1%;
+    width: 30%;
+    height: 100%;
+}
+
+.qtime {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    width: 60%;
+    height: 15%;
+    background-color: var(--comp-bg-color);
+    padding: 20px;
+}
+
+.qnav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: 20%;
+    gap: 2%;
+    border-radius: 5px;
+    width: 60%;
+    height: 58%;
+    background-color: var(--comp-bg-color);
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.navbtn {
+    background-color: #3fd4fae1;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navbtn.atmpt {
+    background-color: #e93810;
+}
+
+.navbtn.current {
+    border-radius: 50%;
+}

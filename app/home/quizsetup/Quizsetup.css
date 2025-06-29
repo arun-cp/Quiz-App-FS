@@ -1,0 +1,129 @@
+
+.setupbody {
+    display: flex;
+    height: 86%;
+    width: 100%;
+}
+
+.setupleft {
+    margin: 2%;
+    border-radius: 5px;
+    width: 50%;
+    height: 90%;
+    background-color: var(--comp-bg-color);
+    padding: 2%;
+}
+
+.setupleft form button {
+    margin-top: 15px;
+    float: right;
+    width: 20%;
+}
+
+.setupright {
+    margin: 2%;
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.setupright h6 {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    color: rgb(38, 12, 236);
+    padding: 4px;
+}
+
+.setuprightbox {
+    border-radius: 5px;
+    width: 100%;
+    height: 80%;
+    background-color: var(--comp-bg-color);
+    padding: 2%;
+    overflow-y: auto;
+}
+
+.setuprightbottom {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 20%;
+}
+
+.setuprightbottom div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.setuprightbottom button {
+    width: 20%;
+    height: 35%;
+}
+
+.setuprightbottom input{
+    padding: 3px 2px;
+    background-color: rgb(194, 201, 217);
+    border-color: rgb(131, 138, 233);
+    height: 30%;
+    width: 95%;
+}
+
+.sqbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    background-color: #83e48778;
+    border-radius: 5px;
+    margin: 6px;
+    padding: 2px 6px;
+    border-color: rgb(200, 199, 193);
+    border-style: solid;
+}
+
+.sqbox div {
+    width: 50%;
+}
+
+.sqbox button {
+    width: 11%;
+    float: right;
+    margin: 0% 1%;
+}
+
+.setupleft label {
+    margin: 10px;
+}
+
+.setupleft input, textarea{
+    margin: 10px;
+    padding: 3px 2px;
+    background-color: rgb(194, 201, 217);
+    border-color: rgb(131, 138, 233);
+    height: 5%;
+    width: 30%;
+}
+
+.setupleft select, option{
+    margin: 10px;
+    padding: 3px 2px;
+    background-color: rgb(194, 201, 217);
+    border-color: rgb(131, 138, 233);
+    height: 51%;
+    width: 30%;
+}
+
+.inputcontain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}

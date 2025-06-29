@@ -1,0 +1,67 @@
+.qoverbg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.qoverbox {
+    background: var(--pop-bg-color);
+    text-align: left;
+    width: 45%;
+    height: 55%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qoverhead {
+    background-color: rgb(55, 55, 110);
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qoverdet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.qoverbox img {
+    height: auto;
+    width: 15%;
+    margin: 5px;
+    text-align: center;
+}
+
+.qoverbox h3 {
+    background-color: rgb(76, 80, 109);
+    color: azure;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    width: 30%;
+    margin: 5px;
+    padding: 10px;
+}
+
+.qoverbox button {
+    margin: 8px 80px;
+    padding: 5px;
+    width: 20%;
+    height: 8%;
+}
