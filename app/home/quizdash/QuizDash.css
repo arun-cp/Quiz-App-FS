@@ -35,7 +35,7 @@
 .flexcont {
     position: relative;
     flex-shrink: 0;
-    background-image: url("../../../Images/attempt.png");
+    background-image: url(".../Images/attempt.png");
     background-size: cover;
     background-position: center;
     margin: 7px 10px;
@@ -72,7 +72,7 @@
 .rflexcont {
     position: relative;
     flex-shrink: 0;
-    background-image: url("../../../Images/result.jpg");
+    background-image: url(".../Images/result.jpg");
     background-size: cover;
     background-position: center;
     margin: 7px 10px;
