@@ -41,7 +41,7 @@ export default function QuizStart() {
             setTimeLeft(prevTime => prevTime - 1);
         }, 1000);
         return () => clearInterval(timer);
-    }, [timeLeft]);
+    }, [timeLeft, qovercntrl, evaluate]);
 
     async function postresult(qdetails) {
         const result = {
@@ -218,9 +218,9 @@ export default function QuizStart() {
                                 style={{ width: '16px', height: 'auto' }} />Previous
                         </span>
                     </button>
-                    {decision.map((dec) => {
+                    {decision.map((dec, index) => {
                         if(dec.indx === qindex)
-                            return(<h4>Submitted Ans : {dec.chosen}</h4>)
+                            return(<h4 key={index}>Submitted Ans : {dec.chosen}</h4>)
                     })}
                 </div>
                 <div className="qdetails" style={{justifyContent : "right"}}>
@@ -260,7 +260,7 @@ export default function QuizStart() {
                         if(qindex == index)
                             btnclass += " current"
                         return(
-                            <button className={btnclass} onClick={() => qbtnctrl(index)}><h3>{index +1}</h3></button>    
+                            <button key={index} className={btnclass} onClick={() => qbtnctrl(index)}><h3>{index +1}</h3></button>    
                         )
                     })}
                 </div>

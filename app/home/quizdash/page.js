@@ -36,7 +36,7 @@ export default function QuizDash() {
             }
         }
         getdata();
-    }, [])
+    }, [setExam])
 
     function clickedexam(index) {
         setindx(index);

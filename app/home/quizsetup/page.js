@@ -159,8 +159,8 @@ export default function Quizsetup() {
                 <div className="setuprightbox">
                     <h3>Questions </h3>
                     <hr/>
-                    {qns.map((qn) => (
-                        <div className="sqbox">
+                    {qns.map((qn, index) => (
+                        <div className="sqbox" key={index}>
                             <div>
                                 <p><b>Q. </b>{qn.question}</p> 
                                 <p><b>A.</b>{qn.A} &nbsp; <b>B.</b>{qn.B} &nbsp; <b>C.</b>{qn.C} &nbsp; <b>D.</b>{qn.D}</p> 
