@@ -1,3 +1,5 @@
+'use client';
+
 import { DashboardProvider } from '@/app/globcontext';
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "./Header";
