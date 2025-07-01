@@ -1,4 +1,6 @@
 'use client';
+
+import { Suspense } from 'react'
 import { useContext, useEffect, useState } from 'react';
 import DashboardContext from '@/app/globcontext';
 import wrong from "@/app/Images/wrong.png";
@@ -6,7 +8,7 @@ import correct from "@/app/Images/correct.png";
 import "./QuizResult.css";
 import { useRouter, useSearchParams } from 'next/navigation';
 
-export default function QuizResult() {
+function QuizResultSearch() {
     const router = useRouter();
     const { Exam, setExam } =  useContext(DashboardContext);
     const searchParams = useSearchParams();
@@ -63,4 +65,13 @@ export default function QuizResult() {
             </div>
         </div>
     )
+}
+
+export default function QuizResult() {
+  return (
+    // You could have a loading skeleton as the `fallback` too
+    <Suspense>
+      <QuizResultSearch />
+    </Suspense>
+  )
 }

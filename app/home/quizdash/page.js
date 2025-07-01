@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import back from "@/app/Images/back.png";
 import create from "@/app/Images/create.png";
 import atempt from "@/app/Images/atempt.png";
@@ -10,7 +11,7 @@ import DashboardContext from '@/app/globcontext';
 import QuizConfirm from "./QuizConfirm";
 import "./QuizDash.css";
 
-export default function QuizDash() {
+function QuizDashSearch() {
     const { Exam, setExam } =  useContext(DashboardContext);
     const [ result , setresult ] = useState([]);
     const [ qstartctrl, setqstartctrl ] = useState(false);
@@ -111,4 +112,13 @@ export default function QuizDash() {
             </div>
         </div>
     )
+}
+
+export default function QuizDash() {
+  return (
+    // You could have a loading skeleton as the `fallback` too
+    <Suspense>
+      <QuizDashSearch />
+    </Suspense>
+  )
 }
