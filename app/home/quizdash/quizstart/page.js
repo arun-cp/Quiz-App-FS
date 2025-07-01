@@ -41,7 +41,7 @@ export default function QuizStart() {
             setTimeLeft(prevTime => prevTime - 1);
         }, 1000);
         return () => clearInterval(timer);
-    }, [timeLeft, qovercntrl, evaluate]);
+    }, [timeLeft, qovercntrl]);
 
     async function postresult(qdetails) {
         const result = {
