@@ -56,7 +56,7 @@ export default function QuizResult() {
                                 <img src={(decision ? decision.res === true ? correct.src : wrong.src : null)}/>
                                 {decision ? <h5>{decision.res === true ? decision.cmark  : decision.wmark} Mark</h5> : null}
                                 {console.log(decision)}
-                            </div>    
+                            </div >    
                         </div>
                     )
                 })}
