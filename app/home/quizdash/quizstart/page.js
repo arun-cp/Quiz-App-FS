@@ -2,6 +2,7 @@
 
 import "./QuizStart.css";
 import { useState , useEffect } from "react";
+import { Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import { useContext } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -17,7 +18,7 @@ import user from "@/app/Images/usericon.png";
 import time from "@/app/Images/clockicon.png";
 import answ from "@/app/Images/answered.png";
 
-export default function QuizStart() {
+function QuizStartSearch() {
     const searchParams = useSearchParams();
     const xamindex = searchParams.get('xamindex');
     const cname = searchParams.get('cname');
@@ -267,4 +268,12 @@ export default function QuizStart() {
             </div>
         </div>
     )
+}
+
+export default function QuizStart() {
+  return (
+    <Suspense>
+      <QuizStartSearch />
+    </Suspense>
+  )
 }

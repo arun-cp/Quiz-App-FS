@@ -1,6 +1,5 @@
 'use client';
 
-import { Suspense } from 'react';
 import back from "@/app/Images/back.png";
 import create from "@/app/Images/create.png";
 import atempt from "@/app/Images/atempt.png";
@@ -11,7 +10,7 @@ import DashboardContext from '@/app/globcontext';
 import QuizConfirm from "./QuizConfirm";
 import "./QuizDash.css";
 
-function QuizDashSearch() {
+export default function QuizDash() {
     const { Exam, setExam } =  useContext(DashboardContext);
     const [ result , setresult ] = useState([]);
     const [ qstartctrl, setqstartctrl ] = useState(false);
@@ -114,10 +113,3 @@ function QuizDashSearch() {
     )
 }
 
-export default function QuizDash() {
-  return (
-    <Suspense>
-      <QuizDashSearch />
-    </Suspense>
-  )
-}
