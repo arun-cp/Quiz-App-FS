@@ -116,7 +116,6 @@ function QuizDashSearch() {
 
 export default function QuizDash() {
   return (
-    // You could have a loading skeleton as the `fallback` too
     <Suspense>
       <QuizDashSearch />
     </Suspense>

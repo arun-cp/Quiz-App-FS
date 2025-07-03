@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from 'react';
 import DashboardContext from '@/app/globcontext';
 import wrong from "@/app/Images/wrong.png";
 import correct from "@/app/Images/correct.png";
+import exit from "@/app/Images/exit.png";
 import "./QuizResult.css";
 import { useRouter, useSearchParams } from 'next/navigation';
 
@@ -20,7 +21,14 @@ function QuizResultSearch() {
         <div className="resultbody">
             <div className="restop">
                 <h2>Result Dashboard</h2>
-                <button onClick={() => router.push('/home/quizdash')}>Exit</button>
+                <button onClick={() => router.push('/home/quizdash')} >
+                    <span>
+                        <img 
+                            src={exit.src} 
+                            alt="alt" 
+                            style={{ width: '16px', height: 'auto' }} /> Exit
+                    </span>
+                </button>
             </div>
             <div className="resmain">
                 <div className="rma">
@@ -69,7 +77,6 @@ function QuizResultSearch() {
 
 export default function QuizResult() {
   return (
-    // You could have a loading skeleton as the `fallback` too
     <Suspense>
       <QuizResultSearch />
     </Suspense>
