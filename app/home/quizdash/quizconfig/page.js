@@ -104,7 +104,7 @@ export default function QuizConfig() {
                 {Exam.map((xam, index) => {
                     if(!xam.del) {
                         return (
-                            <div className="xambox">
+                            <div className="xambox" key={index}>
                                 <div>
                                     <h3>Exam : {xam.exam}</h3>
                                     <h3>Id : {xam.xmid}</h3>
