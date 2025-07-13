@@ -42,7 +42,7 @@ function QuizStartSearch() {
             setTimeLeft(prevTime => prevTime - 1);
         }, 1000);
         return () => clearInterval(timer);
-    }, [timeLeft, qovercntrl]);
+    }, [timeLeft, qovercntrl, evaluate]);
 
     async function postresult(qdetails) {
         const result = {

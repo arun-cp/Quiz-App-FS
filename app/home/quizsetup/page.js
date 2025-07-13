@@ -38,7 +38,7 @@ function Quizsetupsearch() {
             if (xamname.current) xamname.current.value = exam.exam;
             if (xamtime.current) xamtime.current.value = exam.time;
         }
-    }, [searchParams]);
+    }, [searchParams, exam]);
 
     async function postexam(xam) {
         const resp = await fetch('/api/postexam', {

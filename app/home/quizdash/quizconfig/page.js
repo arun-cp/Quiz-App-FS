@@ -42,7 +42,7 @@ export default function QuizConfig() {
 
     useEffect(() => {
         getdata();
-    }, [])
+    }, [getdata])
 
     async function patchexam(xam) {
         const resp = await fetch('/api/patchexam', {
