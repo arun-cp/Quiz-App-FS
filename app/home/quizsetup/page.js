@@ -1,9 +1,8 @@
 "use client"
 
-import { useRef, useState } from "react";
-import { useContext } from 'react';
-import { useRouter } from 'next/navigation';
-import DashboardContext from '@/app/globcontext';
+import { useRef, useState, useEffect } from "react";
+import { useRouter, useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import "./Quizsetup.css";
 import del from "@/app/Images/delete.png";
 import create from "@/app/Images/create.png";
@@ -12,14 +11,15 @@ import add from "@/app/Images/add.png";
 import edit from "@/app/Images/edit.png";
 import QuizCreate from "./QuizCreate";
 
-export default function Quizsetup() {
-    const { Exam, setExam } =  useContext(DashboardContext);
+function Quizsetupsearch() {
+    const searchParams = useSearchParams();
+    const exam = JSON.parse(decodeURIComponent(searchParams.get("exam")));
     const router = useRouter();
     const [qns, setqns] = useState([]);
     const [qctrl, setqctrl] = useState(false);
     const [valid, setvalid] = useState("");
-    const xamname = useRef("");
-    const xamtime = useRef();
+    const xamname = useRef(null);
+    const xamtime = useRef(null);
     const qs = useRef({
         "id" : null,
         "question": null,
@@ -32,6 +32,14 @@ export default function Quizsetup() {
         "wrongmark": null
     })
 
+    useEffect(() => {
+        if (exam) {
+            setqns(exam.qstns);
+            if (xamname.current) xamname.current.value = exam.exam;
+            if (xamtime.current) xamtime.current.value = exam.time;
+        }
+    }, [searchParams]);
+
     async function postexam(xam) {
         const resp = await fetch('/api/postexam', {
             method : 'POST',
@@ -41,7 +49,18 @@ export default function Quizsetup() {
             } 
         });
         const data = await resp.json();
+        console.log(data);
+    }
 
+    async function patchexam(xam) {
+        const resp = await fetch('/api/patchexam', {
+            method : 'PATCH',
+            body : JSON.stringify(xam),
+            headers : {
+                'Content-Type': 'application/json'
+            } 
+        });
+        const data = await resp.json();
         console.log(data);
     }
 
@@ -59,7 +78,12 @@ export default function Quizsetup() {
                 exam : xamname.current.value,
                 time : xamtime.current.value,
                 totmark : total,
+                del : false,
                 qstns : qns
+            }
+            if(exam){
+                const delxam = { ...exam, del: true };
+                patchexam(delxam);
             }
             postexam(xam);
             setqctrl(true);
@@ -104,8 +128,9 @@ export default function Quizsetup() {
 
     return(
         <div className="setupbody">
+            {console.log(exam)}
             <div className="setupleft">
-                {qctrl ? <QuizCreate /> : null}
+                {qctrl ? <QuizCreate edit={exam} /> : null}
                 <h3>Setup Quiz Window</h3>
                 <hr/>
                 <form onSubmit={addqstn}>
@@ -207,4 +232,12 @@ export default function Quizsetup() {
             </div>
         </div>
     )
+}
+
+export default function Quizsetup() {
+  return (
+    <Suspense>
+      <Quizsetupsearch />
+    </Suspense>
+  )
 }

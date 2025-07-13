@@ -7,13 +7,23 @@
 }
 
 .dashtop {
+    border-radius: 5px;
+    background-color: var(--comp-bg-color);
     width: 95%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.dashtop button{
-    float: right;
-    margin: 0% 0.5%;
+.dashtop div {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 30%;
+    gap: 1%;
 }
+
 
 .dashexam {
     border-radius: 5px;

@@ -47,22 +47,33 @@ export default function QuizDash() {
     return(
         <div className="dashbody">
             <div className="dashtop">
-                <button onClick={() => router.push('/home')}>
+                <h2>Dashboard</h2>
+                <div>
+                    <button onClick={() => router.push('/home')}>
                     <span>
                     <img 
                         src={back.src} 
                         alt="Cart Icon" 
                         style={{ width: '15px', height: 'auto' }} /> Back
                     </span>
-                </button>
-                <button onClick={() => router.push('/home/quizsetup')}>
-                    <span>
-                    <img 
-                        src={create.src} 
-                        alt="Cart Icon" 
-                        style={{ width: '15px', height: 'auto' }} /> Create Quiz
-                    </span>
-                </button>
+                    </button>
+                    <button onClick={() => router.push('/home/quizdash/quizconfig')}>
+                        <span>
+                        <img 
+                            src={create.src} 
+                            alt="Icon" 
+                            style={{ width: '15px', height: 'auto' }} /> Configure Quiz
+                        </span>
+                    </button>
+                    <button onClick={() => router.push('/home/quizsetup')}>
+                        <span>
+                        <img 
+                            src={create.src} 
+                            alt="Cart Icon" 
+                            style={{ width: '15px', height: 'auto' }} /> Create Quiz
+                        </span>
+                    </button>
+                </div>
             </div>
             <div className="dashexam">
                 {qstartctrl ? <QuizConfirm xam={Exam[indx]} index={indx} close={setqstartctrl}/> : null} 
@@ -70,20 +81,24 @@ export default function QuizDash() {
                 <hr/>
                 {load ? <img src={loader.src} alt="img" style={{ width: '7%', height: 'auto', display: 'block', margin: 'auto' }} /> : null}
                 <div className="examflex">
-                    {Exam.map((xam, index) => (
-                        <div className="flexcont" key={index}>
-                            <h2>{xam.exam}</h2>
-                            <h3>{xam.qstns.length} Questions</h3>
-                            <button onClick={() => clickedexam(index)}>
-                                <span>
-                                <img 
-                                    src={atempt.src} 
-                                    alt="Cart Icon" 
-                                    style={{ width: '18px', height: 'auto' }} /> Attempt Exam
-                                </span>
-                            </button>
-                        </div>
-                    ))}
+                    {Exam.map((xam, index) => {
+                        if(!xam.del){
+                            return(
+                                <div className="flexcont" key={index}>
+                                    <h2>{xam.exam}</h2>
+                                    <h3>{xam.qstns.length} Questions</h3>
+                                    <button onClick={() => clickedexam(index)}>
+                                        <span>
+                                        <img 
+                                            src={atempt.src} 
+                                            alt="Cart Icon" 
+                                            style={{ width: '18px', height: 'auto' }} /> Attempt Exam
+                                        </span>
+                                    </button>
+                                </div>
+                            )
+                        }}
+                    )}
                 </div>
             </div>
             <div className="dashresult">
