@@ -56,9 +56,9 @@ export default function QuizConfig() {
         console.log(data);
     }
 
-    function deleteexam(index) {
+    async function deleteexam(index) {
         const delxam = { ...Exam[index], del: true };
-        patchexam(delxam);
+        await patchexam(delxam);
         getdata();
     }
 
