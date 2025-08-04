@@ -8,7 +8,7 @@ import quizsetup from "../Images/quizsetup.png";
 export default function Home() {
   const router = useRouter();
     return(
-        <div className="homebody">
+        <div className="homebody" >
                 <div onClick={() => router.push('/home/quizconfig')}> 
                   <span style={{display : "block"}}><img src={quizsetup.src}></img><h2>Setup Quiz</h2></span>
                 </div><br/>
