@@ -129,7 +129,7 @@ export default function QuizConfig() {
                                                 style={{ width: '16px', height: 'auto' }} /> Analytics
                                         </span>
                                     </button>
-                                    <button onClick={() => router.push(`/home/quizsetup?exam=${encodeURIComponent(JSON.stringify(xam))}`)}>
+                                    <button onClick={() => router.push(`/home/quizconfig/quizsetup?exam=${encodeURIComponent(JSON.stringify(xam))}`)}>
                                         <span>
                                             <img
                                                 src={edit.src} 
