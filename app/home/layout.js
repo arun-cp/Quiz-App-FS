@@ -2,6 +2,7 @@
 
 import { DashboardProvider } from '@/app/globcontext';
 import { Geist, Geist_Mono } from "next/font/google";
+import { SessionProvider } from "next-auth/react";
 import Header from "./Header";
 import "../globals.css";
 
@@ -19,11 +20,13 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en">
-      <body >
-        <Header />
-        <DashboardProvider>
-          {children}
-        </DashboardProvider>
+      <body>
+        <SessionProvider>
+          <DashboardProvider>
+            <Header/>
+            {children}
+          </DashboardProvider>
+        </SessionProvider>
       </body>
     </html>
   );

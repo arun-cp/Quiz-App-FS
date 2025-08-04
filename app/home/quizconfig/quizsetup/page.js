@@ -10,6 +10,8 @@ import exit from "@/app/Images/exit.png";
 import add from "@/app/Images/add.png";
 import edit from "@/app/Images/edit.png";
 import QuizCreate from "./QuizCreate";
+import Qlogin from "@/app/home/Qlogin";
+import { useSession } from "next-auth/react";
 
 function Quizsetupsearch() {
     const searchParams = useSearchParams();
@@ -38,7 +40,11 @@ function Quizsetupsearch() {
             if (xamname.current) xamname.current.value = exam.exam;
             if (xamtime.current) xamtime.current.value = exam.time;
         }
-    }, [searchParams, exam]);
+    }, []);
+
+    const { data: session } = useSession();
+    if (!session) 
+        return <Qlogin/>;
 
     async function postexam(xam) {
         const resp = await fetch('/api/postexam', {

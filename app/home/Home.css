@@ -14,6 +14,7 @@
     border-style: solid;
     border-radius: 5px;
     border-color: rgb(214, 210, 204);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.736);
     text-align: center;
 }
 

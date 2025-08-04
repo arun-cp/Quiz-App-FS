@@ -9,7 +9,7 @@ export default function Home() {
   const router = useRouter();
     return(
         <div className="homebody">
-                <div onClick={() => router.push('/home/quizsetup')}> 
+                <div onClick={() => router.push('/home/quizconfig')}> 
                   <span style={{display : "block"}}><img src={quizsetup.src}></img><h2>Setup Quiz</h2></span>
                 </div><br/>
                 <div onClick={() => router.push('/home/quizdash')}>

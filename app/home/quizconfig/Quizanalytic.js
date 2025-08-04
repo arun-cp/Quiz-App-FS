@@ -3,6 +3,7 @@
 import "./Quizanalytic.css";
 import cancel from "@/app/Images/exit.png";
 import analy from "@/app/Images/analytics.png";
+import not from "@/app/Images/not.png";
 import { useState } from "react";
 
 export default function Quizanalytic({xam, result, close}) {

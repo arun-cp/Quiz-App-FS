@@ -49,6 +49,7 @@
     width: 99%;
     border-color: rgb(200, 199, 193);
     border-style: solid;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.736);
 }
 
 .xambox div {

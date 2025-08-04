@@ -13,6 +13,8 @@ import { useContext, useEffect, useState } from 'react';
 import "./QuizConfig.css";
 import Quizview from "./Quizview";
 import Quizanalytic from "./Quizanalytic";
+import Qlogin from "../Qlogin";
+import { useSession } from "next-auth/react";
 
 export default function QuizConfig() {
     const { Exam, setExam } =  useContext(DashboardContext);
@@ -43,6 +45,10 @@ export default function QuizConfig() {
     useEffect(() => {
         getdata();
     }, [])
+
+    const { data: session } = useSession();
+    if (!session) 
+        return <Qlogin/>;
 
     async function patchexam(xam) {
         const resp = await fetch('/api/patchexam', {
@@ -77,7 +83,7 @@ export default function QuizConfig() {
             <div className="configtop">
                 <h2>Exam Configuration</h2>
                 <div>
-                    <button onClick={() => router.push('/home/quizdash')}>
+                    <button onClick={() => router.push('/home')}>
                         <span>
                         <img 
                             src={back.src} 
@@ -85,7 +91,7 @@ export default function QuizConfig() {
                             style={{ width: '15px', height: 'auto' }} /> Back
                         </span>
                     </button>
-                    <button onClick={() => router.push('/home/quizsetup')}>
+                    <button onClick={() => router.push('/home/quizconfig/quizsetup')}>
                         <span>
                         <img 
                             src={create.src} 

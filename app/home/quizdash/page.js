@@ -57,7 +57,7 @@ export default function QuizDash() {
                         style={{ width: '15px', height: 'auto' }} /> Back
                     </span>
                     </button>
-                    <button onClick={() => router.push('/home/quizdash/quizconfig')}>
+                    <button onClick={() => router.push('/home/quizconfig')}>
                         <span>
                         <img 
                             src={create.src} 
@@ -65,7 +65,7 @@ export default function QuizDash() {
                             style={{ width: '15px', height: 'auto' }} /> Configure Quiz
                         </span>
                     </button>
-                    <button onClick={() => router.push('/home/quizsetup')}>
+                    <button onClick={() => router.push('/home/quizconfig/quizsetup')}>
                         <span>
                         <img 
                             src={create.src} 

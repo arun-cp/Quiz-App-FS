@@ -1,16 +1,46 @@
 .headmain {
-    background-color: rgba(57, 57, 109, 0.871);
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
     width: 100%;
     height: 14%;
-
 }
 
-.headmain img {
-    justify-content: center;
+.headbody {
+    background-color: rgba(57, 57, 109, 0.871);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+}
+
+.headbody div{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
+    gap: 2%;
+}
+
+.headbody button {
+    padding: 5px;
+    width: 10%;
+    height: 95%;
+    width: 30%;
+}
+
+.headbody h3{
+    background-color: #adb4ba;
+    border-style: solid;
+    border-color: #9d2106;
+    border-radius: 4px;
+    border-width: 2px;
+    width: 30%;
+    height: 95%;
+    text-align: center;
+}
+
+.headbody img {
     height: auto;
     width: 20%;
 }

@@ -1,0 +1,69 @@
+.qloginbg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.qloginbox {
+    background: var(--pop-bg-color);
+    text-align: left;
+    width: 45%;
+    height: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qloginhead {
+    background-color: rgb(55, 55, 110);
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qloginbody {
+    width: 100%;
+    height: 70%;
+}
+
+.qloginbody form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.qloginbody input {
+    padding: 3px 2px;
+    background-color: rgb(194, 201, 217);
+    border-color: rgb(131, 138, 233);
+    height: 15%;
+    width: 50%;
+}
+
+.qloginbody p {
+    color: rgb(235, 223, 223);
+}
+
+.qloginbtn {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.qloginbtn button {
+    height: 100%;
+    width: 45%;
+}
