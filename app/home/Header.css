@@ -4,7 +4,7 @@
 }
 
 .headbody {
-    background-color: rgba(57, 57, 109, 0.871);
+    background-color: #1E1E2F;
     display: flex;
     justify-content: space-between; 
     align-items: center; 

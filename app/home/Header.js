@@ -1,6 +1,7 @@
 import "./Header.css";
 import headimg from "../Images/headimg.png";
 import logout from "../Images/logout.png";
+import { motion } from "motion/react";
 import user from "../Images/user.png";
 import { useContext , useEffect } from "react";
 import DashboardContext from "@/app/globcontext";
@@ -20,23 +21,30 @@ export default function Header() {
     }
 
     return(
-        <div className="headmain">
+        <motion.div className="headmain"
+            initial={{ opacity: 0, y: 10 }}
+			animate={{ opacity: 1, y: 0 }}
+            transition={{
+                duration: 1,
+                delay: 1,
+                ease: [0, 0.71, 0.2, 1.01],
+            }} >
             {login ? <Qlogin /> : null }
             <div className="headbody">
-            <img src={headimg.src}></img>
-            <div>
-                {session ? <h3><span><img src={user.src} alt="Cart Icon" style={{ width: '15px', height: 'auto' }} />{session.user.name}</span></h3> : null}
-                <button onClick={sign}>
-                <span>
-                    <img 
-                        src={session != null ? logout.src : user.src} 
-                        alt="Cart Icon" 
-                        style={{ width: '15px', height: 'auto' }} /> {session ? "Log Out" : "Log In"} 
-                </span>
-                </button>
+                <img src={headimg.src}></img>
+                <div>
+                    {session ? <h3><span><img src={user.src} alt="Cart Icon" style={{ width: '15px', height: 'auto' }} />{session.user.name}</span></h3> : null}
+                    <button onClick={sign}>
+                    <span>
+                        <img 
+                            src={session != null ? logout.src : user.src} 
+                            alt="Cart Icon" 
+                            style={{ width: '15px', height: 'auto' }} /> {session ? "Log Out" : "Log In"} 
+                    </span>
+                    </button>
+                </div>
             </div>
-        </div>
 
-        </div>
+        </motion.div>
     )
 }
