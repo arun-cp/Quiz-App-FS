@@ -217,7 +217,7 @@ function Quizsetupsearch() {
                         <label>Time :</label>
                         <input type="number" placeholder="Enter Time in minutes" ref={xamtime} required />
                     </div>
-                    <button onClick={() => router.push('/home')}>
+                    <button onClick={() => router.push('/home/quizconfig')}>
                         <span>
                         <img 
                             src={exit.src} 

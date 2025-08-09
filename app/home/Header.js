@@ -24,11 +24,7 @@ export default function Header() {
         <motion.div className="headmain"
             initial={{ opacity: 0, y: 10 }}
 			animate={{ opacity: 1, y: 0 }}
-            transition={{
-                duration: 1,
-                delay: 1,
-                ease: [0, 0.71, 0.2, 1.01],
-            }} >
+            transition={{ duration: 1, delay: 1, ease: 'easeOut'}} >
             {login ? <Qlogin /> : null }
             <div className="headbody">
                 <img src={headimg.src}></img>
