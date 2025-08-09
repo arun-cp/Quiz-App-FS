@@ -9,14 +9,7 @@ import quizsetup from "../Images/quizsetup.png";
 export default function Home() {
   const router = useRouter();
     return(
-        <motion.div className="homebody"
-			initial={{ opacity: 0, y: 70 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{
-				duration: 2,
-				delay: 1,
-				ease: [0, 0.71, 0.2, 1.01],
-			}} >
+        <motion.div className="homebody" initial={{ opacity: 0, y: 70 }} animate={{ opacity: 1, y: 0 }}transition={{duration: 2,delay: 1,ease: [0, 0.71, 0.2, 1.01] }} >
 			<div onClick={() => router.push('/home/quizconfig')}> 
 				<span style={{display : "block"}}><img src={quizsetup.src}></img><h2>Setup Quiz</h2></span>
 			</div><br/>

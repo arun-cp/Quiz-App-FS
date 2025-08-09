@@ -1,7 +1,6 @@
 import "./Header.css";
 import headimg from "../Images/headimg.png";
 import logout from "../Images/logout.png";
-import { motion } from "motion/react";
 import user from "../Images/user.png";
 import { useContext , useEffect } from "react";
 import DashboardContext from "@/app/globcontext";
@@ -21,10 +20,7 @@ export default function Header() {
     }
 
     return(
-        <motion.div className="headmain"
-            initial={{ opacity: 0, y: 10 }}
-			animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1, ease: 'easeOut'}} >
+        <div className="headmain">
             {login ? <Qlogin /> : null }
             <div className="headbody">
                 <img src={headimg.src}></img>
@@ -41,6 +37,6 @@ export default function Header() {
                 </div>
             </div>
 
-        </motion.div>
+        </div>
     )
 }

@@ -5,7 +5,6 @@ import create from "@/app/Images/create.png";
 import atempt from "@/app/Images/atempt.png";
 import loader from "@/app/Images/loading.gif";
 import { useRouter } from 'next/navigation';
-import { motion } from "motion/react";
 import { useContext, useEffect, useState } from 'react';
 import DashboardContext from '@/app/globcontext';
 import QuizConfirm from "./QuizConfirm";
@@ -46,14 +45,7 @@ export default function QuizDash() {
     }
 
     return(
-        <motion.div className="dashbody"
-            initial={{ opacity: 0, y: 70 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-                duration: 2,
-                delay: 0.5,
-                ease: [0, 0.71, 0.2, 1.01],
-            }}>
+        <div className="dashbody">
             <div className="dashtop">
                 <h2>Dashboard</h2>
                 <div>
@@ -132,7 +124,7 @@ export default function QuizDash() {
                     ))}
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
 
