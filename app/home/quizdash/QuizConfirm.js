@@ -17,11 +17,8 @@ export default function QuizConfirm({xam, index, close}) {
     }
 
     return(
-        <div className="qconfrmbg">
+        <div className="popbg">
             <div className="qconfrmbox">
-                <div className="qconfrmhead">
-                    <h1 style={{"margin" : "0px 215px"}}>Quiz Start</h1>
-                </div>
                 <div className="qconfrmbody">
                     <img src={quizstart.src}></img>
                     <h1>{xam.exam}</h1>

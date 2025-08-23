@@ -1,60 +1,42 @@
-.qconfrmbg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
 .qconfrmbox {
     background: var(--pop-bg-color);
     text-align: left;
     width: 40%;
     height: 35%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-}
-
-.qconfrmhead {
-    background-color: rgb(55, 55, 110);
-    width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    gap: 12%;
 }
 
 .qconfrmbody {
+    color: #f6dada;
     width: 95%;
-    padding: 2%;
+    padding: 0% 2%;
     text-align: left;
 }
 
 .qconfrmbody img {
     height: auto;
-    width: 15%;
+    width: 18%;
     float: right;
 }
 
 .qconfrmfoot {
     width: 95%;
-    margin: 3%;
+    padding: 0% 2%;
 }
 
 .qconfrmfoot input{
-    padding: 3px 2px;
-    background-color: rgb(194, 201, 217);
-    border-color: rgb(131, 138, 233);
-    height: auto;
-    width: 35%;
+    padding: 1%;
+    background-color: rgba(78, 88, 119, 0.588);
+    border-radius: 8px;
+    height: 15%;
+    width: 40%;
+    color: #f6dada;
 }
 
 .qconfrmfoot button {

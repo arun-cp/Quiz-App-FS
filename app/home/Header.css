@@ -4,7 +4,6 @@
 }
 
 .headbody {
-    background-color: rgba(57, 57, 109, 0.952);
     display: flex;
     justify-content: space-between; 
     align-items: center; 
@@ -23,21 +22,13 @@
 }
 
 .headbody button {
+    background-color: #6556569a;
+    font-weight: bold;
+    font-size: small;
+    color: aliceblue;
     padding: 5px;
-    width: 10%;
     height: 95%;
     width: 30%;
-}
-
-.headbody h3{
-    background-color: #adb4ba;
-    border-style: solid;
-    border-color: #9d2106;
-    border-radius: 4px;
-    border-width: 2px;
-    width: 30%;
-    height: 95%;
-    text-align: center;
 }
 
 .headbody img {

@@ -136,7 +136,7 @@ function Quizsetupsearch() {
         <div className="setupbody">
             {console.log(exam)}
             <div className="setupleft">
-                {qctrl ? <QuizCreate edit={exam} /> : null}
+                {qctrl ? <QuizCreate xam={xamname.current.value} /> : null}
                 <h3>Setup Quiz Window</h3>
                 <hr/>
                 <form onSubmit={addqstn}>
@@ -217,7 +217,7 @@ function Quizsetupsearch() {
                         <label>Time :</label>
                         <input type="number" placeholder="Enter Time in minutes" ref={xamtime} required />
                     </div>
-                    <button onClick={() => router.push('/home/quizconfig')}>
+                    <button onClick={() => router.back()}>
                         <span>
                         <img 
                             src={exit.src} 

@@ -1,69 +1,58 @@
-.qloginbg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
 .qloginbox {
     background: var(--pop-bg-color);
     text-align: left;
     width: 45%;
     height: 50%;
+    padding: 2%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.qloginhead {
-    background-color: rgb(55, 55, 110);
-    width: 100%;
-    height: 20%;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.qloginbody {
-    width: 100%;
-    height: 70%;
+.qloginbox img {
+    width: 30%;
+    height: auto;
 }
 
-.qloginbody form {
+.qlogincont {
+    color: #f6dada;
+    width: 70%;
+    height: 90%;
+}
+
+.qlogincont form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 100%;
 }
 
-.qloginbody input {
-    padding: 3px 2px;
-    background-color: rgb(194, 201, 217);
-    border-color: rgb(131, 138, 233);
+.qlogincont input {
+    padding: 1%;
+    background-color: rgba(78, 88, 119, 0.588);
+    border-radius: 8px;
     height: 15%;
-    width: 50%;
+    width: 75%;
+    color: #f6dada;
 }
 
-.qloginbody p {
-    color: rgb(235, 223, 223);
+.qlogincont input::placeholder {
+    padding: 2%;
+    color: #eee5e5; 
 }
 
 .qloginbtn {
-    width: 50%;
+    width: 70%;
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .qloginbtn button {
-    height: 100%;
-    width: 45%;
+    height: 70%;
+    width: 40%;
 }

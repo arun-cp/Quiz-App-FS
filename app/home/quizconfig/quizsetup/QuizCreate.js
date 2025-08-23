@@ -3,20 +3,24 @@
 import "./QuizCreate.css";
 import { useRouter } from 'next/navigation';
 import done from "@/app/Images/done.gif";
+import tick from "@/app/Images/tick.png";
+import goto from "@/app/Images/sign.png";
 
-export default function QuizCreate({edit}) {
+export default function QuizCreate({xam}) {
     const router = useRouter();
     return(
-        <div className="qcreatebg">
+        <div className="popbg">
             <div className="qcreatebox">
-                <div className="qcreatehead">
-                    <h1 style={{"margin" : "0px 215px"}}>Quiz Creation</h1>
-                </div>
                 <img src={done.src}/>
+                <h2>{xam}</h2>
                 <h3>Quiz has been Created Successfully</h3>
                 <div className="qcreatebottom">
-                    <button onClick={() => {edit ? router.push('/home/quizdash/quizconfig') : router.push('/home')}} >Done</button>
-                    <button onClick={() => router.push('/home/quizdash')}>Go to Quiz</button>
+                    <button onClick={() => router.push('/home/quizconfig') } >
+                        <span><img src={tick.src} alt="alt" style={{ width: '15px', height: 'auto' }} />Done</span>
+                    </button>
+                    <button onClick={() => router.push('/home/quizdash')}>
+                        <span><img src={goto.src} alt="alt" style={{ width: '15px', height: 'auto' }} />Go To Quiz</span>
+                    </button>
                 </div>
             </div>
         </div>

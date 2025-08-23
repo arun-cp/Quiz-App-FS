@@ -9,7 +9,7 @@
     margin: 2%;
     border-radius: 5px;
     width: 50%;
-    height: 90%;
+    height: 85%;
     background-color: var(--comp-bg-color);
     padding: 2%;
 }
@@ -81,7 +81,7 @@
     justify-content: space-between;
     align-items: center;
     width: 98%;
-    background-color: #83e48778;
+    background-color: #eff3e448;
     border-radius: 5px;
     margin: 6px;
     padding: 2px 6px;

@@ -6,7 +6,7 @@ import cancel from "@/app/Images/exit.png";
 export default function Quizview({qns, close}) {
 
     return(
-        <div className="qviewbg">
+        <div className="popbg">
             {console.log(qns)}
             <div className="qviewbox">
                 <div className="qviewhead">

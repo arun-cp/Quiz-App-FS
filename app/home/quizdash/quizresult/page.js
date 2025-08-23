@@ -57,7 +57,7 @@ function QuizResultSearch() {
                     return(
                         <div className="resqn" key={index}>
                             <div className="rqa">
-                                <p><b>Q. </b>{qn.question}</p> 
+                                <p><b>Q.</b>{qn.question}</p> 
                                 <p><b>A.</b>{qn.A} &nbsp; <b>B.</b>{qn.B}</p>
                                 <p><b>C.</b>{qn.C} &nbsp; <b>D.</b>{qn.D}</p> 
                                 <p><b>Correct Ans : </b>{qn.answer} &nbsp; <b>Marks(+/-) : </b>{qn.correctmark} / {qn.wrongmark}</p>

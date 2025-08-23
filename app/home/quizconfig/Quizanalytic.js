@@ -12,10 +12,10 @@ export default function Quizanalytic({xam, result, close}) {
     console.log(res);
 
     return(
-        <div className="qanalybg">
+        <div className="popbg">
             <div className="qanalybox">
                 <div className="qanalyhead">
-                    <h2>Analytics</h2>
+                    <h2>Exam Analytics</h2>
                 </div>
                 <div className="qanalybody">
                     <div className="xmdetail">
@@ -25,7 +25,7 @@ export default function Quizanalytic({xam, result, close}) {
                         </div>
                         <div>
                             <h3>Time : {xam.time} mins</h3>
-                            <h3>Count : {res.length}</h3>
+                            <h3>Attendees Count : {res.length}</h3>
                         </div>
                         <img src={analy.src} alt="Cart Icon" />
                     </div>

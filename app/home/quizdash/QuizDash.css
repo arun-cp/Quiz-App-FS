@@ -10,93 +10,36 @@
     border-radius: 5px;
     background-color: var(--comp-bg-color);
     width: 95%;
-    padding: 1%;
+    height: 10%;
+    padding: 0% 1%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.dashtop div {
+.dashnav {
+    background-color: #eff3e448;
     display: flex;
     align-items: center;
-    justify-content: end;
-    width: 30%;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 15%;
+    height: 60%;
     gap: 1%;
 }
 
-
-.dashexam {
-    border-radius: 5px;
-    background-color: var(--comp-bg-color);
-    width: 95%;
-    height: 40%;
-    margin: 8px;
-    padding: 12px;
-}
-
-.examflex {
+.dashnav div {
     display: flex;
     align-items: center;
-    height: 80%;
-    width: 100%;
-    overflow-x: auto;
+    justify-content: center;
+    border: 1%;
+    height: 100%;
+    width: 50%;
 }
 
-.flexcont {
-    position: relative;
-    flex-shrink: 0;
-    background-image: url("../../Images/attempt.png");
-    background-size: cover;
-    background-position: center;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.736);
-    margin: 7px 10px;
-    padding: 5px 10px;
-    width: 15%;
-    height: 80%;
-}
-
-.flexcont button {
-    position: absolute;
-    width: 60%;
-    height: 22%;
-    bottom: 8%;
-    right: 4%;
-}
-
-.dashresult {
+.dashnav div.active {
+    background-color: cadetblue;
+    border-style: solid;
+    border-color: rgb(80, 92, 93);
     border-radius: 5px;
-    background-color: var(--comp-bg-color);
-    width: 95%;
-    height: 40%;
-    margin: 8px;
-    padding: 12px;
-}
-
-.resultflex {
-    display: flex;
-    align-items: center;
-    height: 80%;
-    width: 100%;
-    overflow-x: auto;
-}
-
-.rflexcont {
-    position: relative;
-    flex-shrink: 0;
-    background-image: url("../../Images/result.jpg");
-    background-size: cover;
-    background-position: center;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.736);
-    margin: 7px 10px;
-    padding: 5px 10px;
-    width: 15%;
-    height: 80%;
-}
-
-.rflexcont button {
-    position: absolute;
-    width: 55%;
-    height: 22%;
-    bottom: 8%;
-    right: 4%;
 }
